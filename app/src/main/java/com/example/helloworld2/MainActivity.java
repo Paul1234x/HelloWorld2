@@ -12,5 +12,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 }
+private button bOne;
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
 
+    this.bOne = this.findViewById(R.id.bOne);
 
+    this.bone.setOnClickListener(this);
+
+}
