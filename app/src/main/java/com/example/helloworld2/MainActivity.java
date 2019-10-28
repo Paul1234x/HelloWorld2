@@ -5,9 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 //hallo erster comment
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private Button bOne;
     private Button bTwo;
     private Button bThree;
@@ -24,10 +25,16 @@ public class MainActivity extends AppCompatActivity {
     private Button bMultyply;
     private Button bDivide;
     private Button bEarse;
+
+    private TextView tvNumber1;
+    private TextView tvNumber2;
+    private TextView tvOperator;
+    private TextView tvEqual;
+    private TextView tvResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
 
         this.bOne = this.findViewById(R.id.bOne);
         this.bTwo = this.findViewById(R.id.bTwo);
@@ -62,9 +69,16 @@ public class MainActivity extends AppCompatActivity {
         this.bThree.setOnClickListener(this);
         this.bTwo.setOnClickListener(this);
         this.bOne.setOnClickListener(this);
+
+        this.tvNumber1 = this.findViewById(R.id.tvNumber1);
+        this.tvNumber2 = this.findViewById(R.id.tvNumber2);
+        this.tvEqual = this.findViewById(R.id.tvEqual);
+        this.tvOperator = this.findViewById(R.id.tvOperator);
+        this.tvResult= this.findViewById(R.id.tvResult);
     }
 
-
-
+    @Override
+    public void onClick(View view) {
 
     }
+}
