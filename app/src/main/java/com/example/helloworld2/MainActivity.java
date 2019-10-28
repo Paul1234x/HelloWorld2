@@ -17,6 +17,13 @@ public class MainActivity extends AppCompatActivity {
     private Button bSeven;
     private Button bEight;
     private Button bNine;
+    private Button bSero;
+    private Button bEquals;
+    private Button bPlus;
+    private Button bMinus;
+    private Button bMultyply;
+    private Button bDivide;
+    private Button bEarse;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +37,23 @@ public class MainActivity extends AppCompatActivity {
         this.bSix = this.findViewById(R.id.bSix);
         this.bSeven = this.findViewById(R.id.bSeven);
         this.bEight = this.findViewById(R.id.bEight);
+        this.bNine = this.findViewById(R.id.bNine);
+        this.bSero = this.findViewById(R.id.bSero);
+        this.bEquals = this.findViewById(R.id.bEquals);
+        this.bPlus = this.findViewById(R.id.bPlus);
+        this.bMinus = this.findViewById(R.id.bMinus);
+        this.bMultyply = this.findViewById(R.id.bMultiply);
+        this.bDivide = this.findViewById(R.id.bDivide);
+        this.bEarse = this.findViewById(R.id.bEarse);
 
+        this.bEarse.setOnClickListener(this);
+        this.bDivide.setOnClickListener(this);
+        this.bMultyply.setOnClickListener(this);
+        this.bMinus.setOnClickListener(this);
+        this.bPlus.setOnClickListener(this);
+        this.bEquals.setOnClickListener(this);
+        this.bSero.setOnClickListener(this);
+        this.bNine.setOnClickListener(this);
         this.bEight.setOnClickListener(this);
         this.bSeven.setOnClickListener(this);
         this.bSix.setOnClickListener(this);
@@ -45,78 +68,3 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        this.bNine = this.findViewById(R.id.bNine);
-
-        this.bNine.setOnClickListener(this);
-
-    }
-    private Button bSero;
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        this.bSero = this.findViewById(R.id.bSero);
-
-        this.bSero.setOnClickListener(this);
-    }
-    private Button bEquals;
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        this.bEquals = this.findViewById(R.id.bEquals);
-
-        this.bEquals.setOnClickListener(this);
-    }
-    private Button bPlus;
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        this.bPlus = this.findViewById(R.id.bPlus);
-
-        this.bPlus.setOnClickListener(this);
-    }
-    private Button bMinus;
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        this.bMinus = this.findViewById(R.id.bMinus);
-
-        this.bMinus.setOnClickListener(this);
-    }
-    private Button bMultyply;
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        this.bMultyply = this.findViewById(R.id.bMultiply);
-
-        this.bMultyply.setOnClickListener(this);
-    }
-    private Button bDivide;
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        this.bDivide = this.findViewById(R.id.bDivide);
-
-        this.bDivide.setOnClickListener(this);
-    }
-    private Button bEarse;
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        this.bEarse = this.findViewById(R.id.bEarse);
-
-        this.bEarse.setOnClickListener(this);
-    }
-
-}
