@@ -10,9 +10,9 @@ import android.widget.TextView;
 //hallo erster comment
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Integer number1=0;
-    private Integer number2=0;
-    private Integer result=0;
+    private Double   number1 = 0.0;
+    private Double number2 = 0.0;
+    private Double result = 0.0;
     private Integer operator = 0; //1 für +, 2 für -, 3 für * und 4 für / //
 
 
@@ -92,53 +92,58 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (clicked.getId() == this.bSero.getId()) {
 
-            number2 = number2*10 + 0;
+            number2 = number2 * 10 + 0;
             this.tvNumber2.setText(number2.toString());
         }
         if (clicked.getId() == this.bOne.getId()) {
 
-            number2 = number2*10 + 1;
+            number2 = number2 * 10 + 1;
             this.tvNumber2.setText(number2.toString());
         }
         if (clicked.getId() == this.bTwo.getId()) {
 
-            number2 = number2*10 + 2;
+            number2 = number2 * 10 + 2;
             this.tvNumber2.setText(number2.toString());
         }
         if (clicked.getId() == this.bThree.getId()) {
 
-            number2 = number2*10 + 3;
+            number2 = number2 * 10 + 3;
             this.tvNumber2.setText(number2.toString());
         }
         if (clicked.getId() == this.bFour.getId()) {
 
-            number2 = number2*10 + 4;
+            number2 = number2 * 10 + 4;
             this.tvNumber2.setText(number2.toString());
-        }       if (clicked.getId() == this.bFive.getId()) {
+        }
+        if (clicked.getId() == this.bFive.getId()) {
 
-            number2 = number2*10 + 5;
+            number2 = number2 * 10 + 5;
             this.tvNumber2.setText(number2.toString());
-        }       if (clicked.getId() == this.bSix.getId()) {
+        }
+        if (clicked.getId() == this.bSix.getId()) {
 
-            number2 = number2*10 + 6;
+            number2 = number2 * 10 + 6;
             this.tvNumber2.setText(number2.toString());
-        }       if (clicked.getId() == this.bSeven.getId()) {
+        }
+        if (clicked.getId() == this.bSeven.getId()) {
 
-            number2 = number2*10 + 7;
+            number2 = number2 * 10 + 7;
             this.tvNumber2.setText(number2.toString());
-        }       if (clicked.getId() == this.bEight.getId()) {
+        }
+        if (clicked.getId() == this.bEight.getId()) {
 
-            number2 = number2*10 + 8;
+            number2 = number2 * 10 + 8;
             this.tvNumber2.setText(number2.toString());
-        }       if (clicked.getId() == this.bNine.getId()) {
+        }
+        if (clicked.getId() == this.bNine.getId()) {
 
-            number2 = number2*10 + 9;
+            number2 = number2 * 10 + 9;
             this.tvNumber2.setText(number2.toString());
         }
 
         if (clicked.getId() == this.bPlus.getId()) {
             number1 = number2;
-            number2 = 0;
+            number2 = 0.0;
             tvNumber1.setText(number1.toString());
             tvNumber1.setVisibility(View.VISIBLE);
 
@@ -150,7 +155,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (clicked.getId() == this.bMinus.getId()) {
             number1 = number2;
-            number2 = 0;
+            number2 = 0.0;
             tvNumber1.setText(number1.toString());
             tvNumber1.setVisibility(View.VISIBLE);
 
@@ -162,7 +167,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (clicked.getId() == this.bMultyply.getId()) {
             number1 = number2;
-            number2 = 0;
+            number2 = 0.0;
             tvNumber1.setText(number1.toString());
             tvNumber1.setVisibility(View.VISIBLE);
 
@@ -174,7 +179,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (clicked.getId() == this.bDivide.getId()) {
             number1 = number2;
-            number2 = 0;
+            number2 = 0.0;
             tvNumber1.setText(number1.toString());
             tvNumber1.setVisibility(View.VISIBLE);
 
@@ -184,6 +189,49 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             tvOperator.setVisibility(View.VISIBLE);
             tvOperator.setText("/");
         }
-        
+        if (clicked.getId() == this.bEquals.getId()) {
+            switch(operator){
+                case 1:
+                    result = number1 + number2;
+                    tvResult.setText(result.toString());
+                    tvResult.setVisibility(View.VISIBLE);
+                    tvEqual.setVisibility(View.VISIBLE);
+                    operator=0;
+                    break;
+                case 2:
+                    result = number1 - number2;
+                    tvResult.setText(result.toString());
+                    tvResult.setVisibility(View.VISIBLE);
+                    tvEqual.setVisibility(View.VISIBLE);
+                    operator=0;
+                    break;
+                case 3:
+                    result = number1 * number2;
+                    tvResult.setText(result.toString());
+                    tvResult.setVisibility(View.VISIBLE);
+                    tvEqual.setVisibility(View.VISIBLE);
+                    operator=0;
+                    break;
+                case 4:
+                    result = number1 / number2;
+                    tvResult.setText(result.toString());
+                    tvResult.setVisibility(View.VISIBLE);
+                    tvEqual.setVisibility(View.VISIBLE);
+                    operator=0;
+                    break;
+            }
+        }
+        if (clicked.getId() == this.bEarse.getId()) {
+
+            tvResult.setVisibility(View.GONE);
+            tvNumber1.setVisibility(View.GONE);
+            tvNumber2.setText("");
+            tvEqual.setVisibility(View.GONE);
+            tvOperator.setVisibility(View.GONE);
+            number2 = 0.0;
+            number1 = 0.0;
+            operator= 0;
+
+        }
     }
 }
