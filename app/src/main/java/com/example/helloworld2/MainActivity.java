@@ -230,8 +230,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             tvOperator.setVisibility(View.GONE);
             number2 = 0.0;
             number1 = 0.0;
-            operator= 0;
+            operator = 0;
 
+        }
+    }
+    public String toString(){
+        String calculation;
+        calculation = number1.toString() + " " + operator.toString() + " " + number2.toString() + " = " + result.toString();
+    }
+
+    private String operatorToString(){
+        switch (operator){
+            case 1:
+                return "+";
+            case 2:
+                return "-";
+            case 3:
+                return "*";
+            case 4:
+                return "/";
+            default:
+                return "";
         }
     }
 }
